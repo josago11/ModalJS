@@ -1,0 +1,98 @@
+$version: "2.0.0";
+
+/* CSS  for modalJS version #{$version}.*/
+
+@import "_variables";
+
+$iconImage: "../Images/MasterPage/lo.png";
+.mJS {
+    background-color: $bckColor;
+    border:solid 2px $primaryColor;
+    position:absolute;
+    margin-left: auto;
+	margin-right: auto;
+    left:0;
+    right:0;
+    z-index:7002;
+    box-shadow:10px 10px 10px $shadow;
+    display:none;
+    opacity:0.2;
+    .head_mJS {
+        background-color: $primaryColor;
+        height:25px;
+        padding:0px;
+        text-align:center;
+        color:white;
+        .cent_mJS{
+            background-color:$primaryColor;
+            height:100%;
+            width:50px;
+            margin:0px;
+            font-size:20px;
+            text-align:center;
+            float:right;
+            display:inline-block;
+        }
+        .btnX_mJS{
+            background-color: $redColor;
+            color:white;
+            height:100%;
+            width:50px;
+            margin:0px;
+            font-size:20px;
+            text-align:center;
+            float:right;
+            cursor:pointer;
+            display:inline-block;
+            &:hover{
+                background-color:$lightRedColor;
+            }
+        } 
+        .image_mJS{
+            height:100%;
+            width:50px;
+            background-image:url($iconImage);
+            background-repeat:no-repeat;
+            float:left;
+        }
+        .title_mJS{
+            height:100%;
+            text-align:center;       
+            display:inline-table;
+            font-size:fontSizeMedium;
+        }
+    }
+    
+    .conBtnAcpCan_mJS{
+         display: flex;
+        .btnAccept_mJS, .btnCancel_mJS{
+            background-color: $primaryColor;
+            min-width:100px;
+            margin:auto;
+            margin: 10px;
+            padding:5px;
+            text-align:center;
+            font-size:14px;
+            cursor:pointer;
+            color:white;
+            display: inline-block;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        & > div{
+            margin:auto;
+        }
+    }
+}
+.back_mJS{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    z-index:7001;
+    background-color:rgba(230,230,230, 0.5);
+    display:none;
+    opacity:0.1;
+}
